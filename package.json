@@ -1,0 +1,23 @@
+{
+  "name": "noaa-radar-pipeline",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "mrms": "npx tsx scripts/generate-mrms-tiles.ts && npx tsx scripts/upload-mrms-tiles.ts",
+    "hrrr": "npx tsx scripts/generate-hrrr-tiles.ts && npx tsx scripts/upload-hrrr-tiles.ts",
+    "mrms:generate": "npx tsx scripts/generate-mrms-tiles.ts",
+    "mrms:upload": "npx tsx scripts/upload-mrms-tiles.ts",
+    "hrrr:generate": "npx tsx scripts/generate-hrrr-tiles.ts",
+    "hrrr:upload": "npx tsx scripts/upload-hrrr-tiles.ts"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "3.1019.0",
+    "dotenv": "16.4.7",
+    "sharp": "0.33.5"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "tsx": "4.21.0",
+    "typescript": "5.9.3"
+  }
+}
