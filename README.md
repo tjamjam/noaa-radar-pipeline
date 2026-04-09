@@ -2,6 +2,10 @@
 
 Self-hosted NEXRAD radar tile pipeline using free NOAA data. Replaces commercial radar tile APIs (~$1K/mo at scale) with a $4/mo EC2 instance.
 
+## Demo
+
+[LucidSky](https://apps.apple.com/app/lucidsky/id6477759178) — iOS weather app using this pipeline for live radar and 24hr forecast precip maps.
+
 ## What it does
 
 **MRMS (live radar):** Downloads NOAA's Multi-Radar Multi-Sensor (MRMS) GRIB2 data every 5 minutes, reprojects to Web Mercator, applies separate color ramps for rain, snow, and hail, and generates XYZ PNG tiles. Uploads to Cloudflare R2.
@@ -89,6 +93,3 @@ Both cron jobs use file locking to prevent overlapping runs.
 | HRRR AWS Open Data | Free |
 | Cloudflare R2 storage + egress | Free (R2 has no egress fees) |
 
-## Demo
-
-[LucidSky](https://apps.apple.com/app/lucidsky/id6477759178) — iOS weather app using this pipeline for live radar and 24hr forecast precip maps.
