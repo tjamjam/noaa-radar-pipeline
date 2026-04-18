@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run mrms:*)",
+      "Bash(npm run hrrr:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npx tsx scripts/*)",
+      "Bash(gdalinfo:*)",
+      "Bash(gdalwarp:*)",
+      "Bash(git status)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)"
+    ]
+  }
+}
